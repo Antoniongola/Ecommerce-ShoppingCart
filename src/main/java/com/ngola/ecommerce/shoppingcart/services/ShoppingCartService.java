@@ -5,6 +5,8 @@ import com.ngola.ecommerce.shoppingcart.repositories.ShoppingCartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ShoppingCartService implements ShoppingCartServiceInterface{
     @Autowired
@@ -29,5 +31,9 @@ public class ShoppingCartService implements ShoppingCartServiceInterface{
     @Override
     public double shoppingCartTotalPrice() {
         return 0;
+    }
+
+    public List<ShoppingCart> findAll(){
+        return this.shoppingCartRepository.findAll();
     }
 }
