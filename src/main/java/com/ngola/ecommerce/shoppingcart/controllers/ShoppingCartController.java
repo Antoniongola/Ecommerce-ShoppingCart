@@ -18,7 +18,7 @@ public class ShoppingCartController {
         return this.shoppingCartService.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/shoppingcart/products/new")
     public void newProduct(@RequestBody ShoppingCart shoppingCart){
         this.shoppingCartService.newProduct(shoppingCart);
     }
