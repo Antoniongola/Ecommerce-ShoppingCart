@@ -11,5 +11,5 @@ public class ShoppingCart {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
 
-    private long fkProduct;
+    private long productId;
 }
