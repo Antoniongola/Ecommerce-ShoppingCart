@@ -13,19 +13,15 @@ public class ShoppingCartService implements ShoppingCartServiceInterface{
     private ShoppingCartRepository shoppingCartRepository;
 
     @Override
-    public boolean newProduct(ShoppingCart shoppingCart) {
+    public void newProduct(ShoppingCart shoppingCart) {
         this.shoppingCartRepository.save(shoppingCart);
-        return true;
     }
 
     @Override
-    public boolean removeProduct(long shoppingCartid) {
+    public void removeProduct(long shoppingCartid) {
         if(this.shoppingCartRepository.findById(shoppingCartid).isPresent()) {
             this.shoppingCartRepository.deleteById(shoppingCartid);
-            return true;
         }
-
-        return false;
     }
 
     @Override

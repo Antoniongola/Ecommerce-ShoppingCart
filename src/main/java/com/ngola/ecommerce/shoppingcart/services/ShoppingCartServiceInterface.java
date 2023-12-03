@@ -5,8 +5,8 @@ import com.ngola.ecommerce.shoppingcart.entities.ShoppingCart;
 import java.util.List;
 
 public interface ShoppingCartServiceInterface {
-    public boolean newProduct(ShoppingCart shoppingCart);
-    public boolean removeProduct(long shoppingCartid);
+    public void newProduct(ShoppingCart shoppingCart);
+    public void removeProduct(long shoppingCartId);
     public List<ShoppingCart> findAll();
     public double shoppingCartTotalPrice();
 }

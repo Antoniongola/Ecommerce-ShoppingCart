@@ -8,3 +8,5 @@ localhost:8080/api/shoppingcart/products/new
 - For removing a product from the shopping cart:
 localhost:8080/api/shoppingcart/products/{productId}
 
+- For checking out all the products from the shopping cart:
+localhost:8080/api/shoppingcart/products/checkout
